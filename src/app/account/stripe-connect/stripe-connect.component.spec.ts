@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { StripeConnectComponent } from './stripe-connect.component';
 
@@ -6,7 +6,7 @@ describe('StripeConnectComponent', () => {
   let component: StripeConnectComponent;
   let fixture: ComponentFixture<StripeConnectComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ StripeConnectComponent ]
     })

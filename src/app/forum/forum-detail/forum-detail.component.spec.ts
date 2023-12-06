@@ -1,11 +1,11 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { ForumDetailComponent } from './forum-detail.component';
 
 describe('ForumDetailComponent', () => {
   let component: ForumDetailComponent;
   let fixture: ComponentFixture<ForumDetailComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ForumDetailComponent ]
     })

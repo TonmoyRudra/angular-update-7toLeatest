@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ResourcesBannerComponent } from './resources-banner.component';
 
@@ -6,7 +6,7 @@ describe('ResourcesBannerComponent', () => {
   let component: ResourcesBannerComponent;
   let fixture: ComponentFixture<ResourcesBannerComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ResourcesBannerComponent ]
     })

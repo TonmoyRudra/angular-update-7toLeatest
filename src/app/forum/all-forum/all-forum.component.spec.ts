@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { AllForumComponent } from './all-forum.component';
 
@@ -6,7 +6,7 @@ describe('AllForumComponent', () => {
   let component: AllForumComponent;
   let fixture: ComponentFixture<AllForumComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ AllForumComponent ]
     })
