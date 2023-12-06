@@ -57,23 +57,23 @@ import { AuthGuard } from "./guards";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
-  { path: "sign-up", loadChildren: "./sign-up/sign-up.module#SignUpModule" },
+  { path: "sign-up", loadChildren: () => import('./sign-up/sign-up.module').then(m => m.SignUpModule) },
   {
     path: "sign-up/:package",
-    loadChildren: "./sign-up/sign-up.module#SignUpModule",
+    loadChildren: () => import('./sign-up/sign-up.module').then(m => m.SignUpModule),
   },
   {
     path: "sign-up/:package/:action",
-    loadChildren: "./sign-up/sign-up.module#SignUpModule",
+    loadChildren: () => import('./sign-up/sign-up.module').then(m => m.SignUpModule),
   },
   {
     path: "manufacturer-signup",
     loadChildren:
-      "./sign-up/manufacturer-signup/manufacturer-signup.module#ManufacturerSignupModule",
+      () => import('./sign-up/manufacturer-signup/manufacturer-signup.module').then(m => m.ManufacturerSignupModule),
   },
   {
     path: "join-now",
-    loadChildren: "./sign-up/join/join.module#JoinModule",
+    loadChildren: () => import('./sign-up/join/join.module').then(m => m.JoinModule),
   },
   { path: "thank-you", component: ThankYouComponent },
   { path: "thank-you/:slug", component: ThankYouComponent },
@@ -85,35 +85,35 @@ const routes: Routes = [
   { path: "details/:slug", component: NewsDetailComponent },
   { path: "blog/post/:slug", component: NewsDetailComponent },
   { path: "success", component: SuccessComponent },
-  { path: "member", loadChildren: "./account/account.module#AccountModule" },
-  { path: "shop", loadChildren: "./store/store.module#StoreModule" },
+  { path: "member", loadChildren: () => import('./account/account.module').then(m => m.AccountModule) },
+  { path: "shop", loadChildren: () => import('./store/store.module').then(m => m.StoreModule) },
   //{ path: 'shop/:category', loadChildren: './store/store.module#StoreModule' },
   // { path: "dashboard", component: DashboardComponent },
   { path: "faqs", component: FaqsComponent },
   {
     path: "product/:slug",
-    loadChildren: "./product/product.module#ProductModule",
+    loadChildren: () => import('./product/product.module').then(m => m.ProductModule),
   },
   {
     path: "shop/product/p/:slug",
-    loadChildren: "./product/product.module#ProductModule",
+    loadChildren: () => import('./product/product.module').then(m => m.ProductModule),
   },
-  { path: "cart", loadChildren: "./store/cart/cart.module#CartModule" },
+  { path: "cart", loadChildren: () => import('./store/cart/cart.module').then(m => m.CartModule) },
   {
     path: "checkout",
-    loadChildren: "./store/cart/checkout/checkout.module#CheckoutModule",
+    loadChildren: () => import('./store/cart/checkout/checkout.module').then(m => m.CheckoutModule),
   },
   {
     path: "checkout/:token",
-    loadChildren: "./store/cart/checkout/checkout.module#CheckoutModule",
+    loadChildren: () => import('./store/cart/checkout/checkout.module').then(m => m.CheckoutModule),
   },
   {
     path: "payment",
-    loadChildren: "./store/cart/payment/payment.module#PaymentModule",
+    loadChildren: () => import('./store/cart/payment/payment.module').then(m => m.PaymentModule),
   },
   {
     path: "payment/:token",
-    loadChildren: "./store/cart/payment/payment.module#PaymentModule",
+    loadChildren: () => import('./store/cart/payment/payment.module').then(m => m.PaymentModule),
   },
   { path: "not-found", component: NotFoundComponent },
   { path: "contact-us", component: ContactUsComponent },
@@ -164,10 +164,10 @@ const routes: Routes = [
   },
   {
     path: "",
-    loadChildren: "./academy/academy.module#VideoPortalModule",
+    loadChildren: () => import('./academy/academy.module').then(m => m.VideoPortalModule),
   },
   { path: "events", component: EventsComponent },
-  { path: "forum", loadChildren: "./forum/forum.module#ForumModule" },
+  { path: "forum", loadChildren: () => import('./forum/forum.module').then(m => m.ForumModule) },
   { path: "overview", component: OveriewComponent },
   { path: "tickets", component: TicketingComponent },
   { path: "tickets/create", component: CreateTicketComponent },
