@@ -3,7 +3,7 @@
   "version": "1.0.9",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 6001",
+    "start": "ng serve --port=4211",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -70,7 +70,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.13.0",
-    "@angular/cli": "~7.3.8",
+    "@angular/cli": "^7.3.10",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
     "@types/jasmine": "~2.8.8",
